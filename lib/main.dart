@@ -42,9 +42,10 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     Timer(
-        const Duration(seconds: 3),
+        const Duration(seconds: 6),
         () => Navigator.of(context).pushReplacement(MaterialPageRoute(
-            builder: (BuildContext context) => const MyHomePage(title: 'FYP OCR Demo App',))));
+            builder: (BuildContext context) => const MyHomePage(title: 'FYP OCR Demo App',)))
+          );
   }
 
   @override
@@ -54,16 +55,12 @@ class _SplashScreenState extends State<SplashScreen> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const Text("FYP OCR App 🔎",style: TextStyle(color:Color(0xff27374D),fontSize: 30),),
-          const SizedBox(
-            height:10
-          ),
           Center(
             child: Container(
-              height:5,
-              width: MediaQuery.of(context).size.width*0.8,
-              color: const Color(0xff27374D),
-              child: const LinearProgressIndicator(color: Colors.white,minHeight: 5),
+              height:300,
+              width: 300,
+              color: Colors.white,
+              child: Lottie.asset("assets/ai.json")
             ),
           ),
         ],

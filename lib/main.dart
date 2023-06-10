@@ -1,4 +1,7 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
+import 'homepage.dart';
+import 'package:lottie/lottie.dart';
 
 void main() {
   runApp(const MyApp());
@@ -25,50 +28,48 @@ class MyApp extends StatelessWidget {
         900: Color(0xff27374D),
 }),
       ),
-      home: const MyHomePage(title: 'FYP OCR Demo App 🔎',),
+      home: SplashScreen(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-  final String title;
+class SplashScreen extends StatefulWidget {
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  _SplashScreenState createState() => _SplashScreenState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _SplashScreenState extends State<SplashScreen> {
+  @override
+  void initState() {
+    Timer(
+        const Duration(seconds: 3),
+        () => Navigator.of(context).pushReplacement(MaterialPageRoute(
+            builder: (BuildContext context) => const MyHomePage(title: 'FYP OCR Demo App',))));
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-        centerTitle: true,
+    return  Scaffold(
+      backgroundColor: Colors.white,
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          const Text("FYP OCR App 🔎",style: TextStyle(color:Color(0xff27374D),fontSize: 30),),
+          const SizedBox(
+            height:10
+          ),
+          Center(
+            child: Container(
+              height:5,
+              width: MediaQuery.of(context).size.width*0.8,
+              color: const Color(0xff27374D),
+              child: const LinearProgressIndicator(color: Colors.white,minHeight: 5),
+            ),
+          ),
+        ],
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-             OutlinedButton(
-             onPressed: (){},
-             style: OutlinedButton.styleFrom(
-             side: const BorderSide(
-             color: Colors.black
-              )
-             ), child: const Text("Upload Picture"),),
-             OutlinedButton(
-              onPressed: (){},
-              style: OutlinedButton.styleFrom(
-              side: const BorderSide(
-              color: Colors.black
-              )
-             ), 
-             child: const Text("Scan Document")
-             )
-          ],
-        ),
-      ),
-      
     );
   }
 }
+
+

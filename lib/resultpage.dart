@@ -1,10 +1,9 @@
-import 'dart:io';
-import 'homepage.dart';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:get/get.dart';
+
+import 'dart:io';
 
 class ResultPage extends StatefulWidget {
   const ResultPage({super.key});
@@ -72,7 +71,7 @@ class _ResultPageState extends State<ResultPage> {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(onPressed: (){
-          Get.to(const MyHomePage(title: "'FYP OCR Demo App'"),);
+          Get.back();
         }, icon: const Icon(Icons.arrow_back_ios_new)),
         shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.vertical(

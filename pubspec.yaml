@@ -3,7 +3,6 @@ description: A new Flutter project.
 
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
-
 version: 1.0.0+1
 
 environment:
@@ -16,11 +15,11 @@ dependencies:
   cupertino_icons: ^1.0.2
   lottie: ^2.3.2
   flutter_launcher_icons: ^0.13.1
-  # camera: ^0.10.5+2
+  camera: ^0.10.5+2
   get: ^4.6.5
   path_provider: ^2.0.15
-  # file_selector: ^0.9.3
-  # image_picker: ^0.8.8
+  file_selector: ^0.9.3
+  image_picker: ^0.8.8
 
 dev_dependencies:
   flutter_test:
@@ -36,9 +35,7 @@ flutter_launcher_icons:
   adaptive_icon_foreground: "assets/ocr8.png"
 
 flutter:
-
   uses-material-design: true
-
   assets:
     - assets/
 

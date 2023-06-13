@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:fyp_ocr_app/resultpage.dart';
-import 'package:fyp_ocr_app/scanningpage.dart';
 import 'package:get/get.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -11,6 +10,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+
   // String? _selectedFilePath;
 
   // Future<void> _openFilePicker() async {
@@ -54,7 +54,7 @@ class _MyHomePageState extends State<MyHomePage> {
              OutlinedButton(
               onPressed: (){
                 // Get.to(ScanningPage());
-                   Get.to(ResultPage());
+                   Get.to(const ResultPage());
               },
               style: OutlinedButton.styleFrom(
               side: const BorderSide(

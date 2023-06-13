@@ -1,8 +1,9 @@
-import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'homepage.dart';
 import 'package:lottie/lottie.dart';
+
+import 'homepage.dart';
+import 'dart:async';
 
 void main() {
   runApp(const MyApp());

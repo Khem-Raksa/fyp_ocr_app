@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'homepage.dart';
 import 'package:lottie/lottie.dart';
 
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
@@ -47,7 +48,6 @@ class _SplashScreenState extends State<SplashScreen> {
             builder: (BuildContext context) => const MyHomePage(title: 'FYP OCR Demo App',)))
           );
   }
-
   @override
   Widget build(BuildContext context) {
     return  Scaffold(

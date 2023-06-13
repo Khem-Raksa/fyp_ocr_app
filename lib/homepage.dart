@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:file_picker/file_picker.dart';
+import 'package:fyp_ocr_app/resultpage.dart';
+import 'package:fyp_ocr_app/scanningpage.dart';
+import 'package:get/get.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
@@ -10,25 +11,20 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  late String _filepath;
+  // String? _selectedFilePath;
 
-  void _openFilePicker() async {
-    try{
+  // Future<void> _openFilePicker() async {
+  //   final typeGroup = XTypeGroup(label: 'All Files', extensions: ['*']);
+  //   final file = await openFile(acceptedTypeGroups: [typeGroup]);
 
-      FilePickerResult? result = await FilePicker.platform.pickFiles(
-        type: FileType.image
-      );
-
-      if (result!=null){
-        setState(() {
-          _filepath = result.files.single.path!;
-        });
-      }
-
-    } on PlatformException catch(e) {
-      print("Error while picking the file: $e");
-    }
-  }
+  //   if (file != null) {
+  //     setState(() {
+  //       _selectedFilePath = file.path;
+  //     });
+  //   } else {
+  //     print('No file selected');
+  //   }
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -47,14 +43,19 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
              OutlinedButton(
-             onPressed: (){},
+             onPressed: (){
+              // _openFilePicker();
+             },
              style: OutlinedButton.styleFrom(
              side: const BorderSide(
              color: Colors.black
               )
              ), child: const Text("Upload Picture"),),
              OutlinedButton(
-              onPressed: (){},
+              onPressed: (){
+                // Get.to(ScanningPage());
+                   Get.to(ResultPage());
+              },
               style: OutlinedButton.styleFrom(
               side: const BorderSide(
               color: Colors.black

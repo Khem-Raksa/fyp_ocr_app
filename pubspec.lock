@@ -33,6 +33,46 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.1"
+  camera:
+    dependency: "direct main"
+    description:
+      name: camera
+      sha256: ebebead3d5ec3d148249331d751d462d7e8c98102b8830a9b45ec96a2bd4333f
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.10.5+2"
+  camera_android:
+    dependency: transitive
+    description:
+      name: camera_android
+      sha256: f83e406d34f5faa80bf0f5c3beee4b4c11da94a94e9621c1bb8e312988621b4b
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.10.8+2"
+  camera_avfoundation:
+    dependency: transitive
+    description:
+      name: camera_avfoundation
+      sha256: "1a416e452b30955b392f4efbf23291d3f2ba3660a85e1628859eb62d2a2bab26"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.9.13+2"
+  camera_platform_interface:
+    dependency: transitive
+    description:
+      name: camera_platform_interface
+      sha256: "60fa0bb62a4f3bf3a7c413e31e4cd01b69c779ccc8e4668904a24581b86c316b"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.5.1"
+  camera_web:
+    dependency: transitive
+    description:
+      name: camera_web
+      sha256: bcbd775fb3a9d51cc3ece899d54ad66f6306410556bac5759f78e13f9228841f
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.3.1+4"
   characters:
     dependency: transitive
     description:
@@ -129,6 +169,25 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "6.1.4"
+<<<<<<< HEAD
+=======
+  file_selector:
+    dependency: "direct main"
+    description:
+      name: file_selector
+      sha256: a96fa9e956c1045c1879164b09f62918d827f6757a55d0ed2aa29c4fa2370c0b
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.9.3"
+  file_selector_ios:
+    dependency: transitive
+    description:
+      name: file_selector_ios
+      sha256: "54542b6b35e3ced6246df5fae13cf0b879d14669d0fdff1a53a098f16e23328b"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.5.1+4"
+>>>>>>> b945e4858da5067237549d83b7411d45aecbbf6b
   file_selector_linux:
     dependency: transitive
     description:
@@ -153,6 +212,17 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.5.1"
+<<<<<<< HEAD
+=======
+  file_selector_web:
+    dependency: transitive
+    description:
+      name: file_selector_web
+      sha256: dd961a76a1954225b407313356f41cc106ccffc764a1c30764cc6fe09b109932
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.9.0+4"
+>>>>>>> b945e4858da5067237549d83b7411d45aecbbf6b
   file_selector_windows:
     dependency: transitive
     description:
@@ -200,6 +270,7 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+<<<<<<< HEAD
   http:
     dependency: "direct main"
     description:
@@ -208,6 +279,24 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.0"
+=======
+  get:
+    dependency: "direct main"
+    description:
+      name: get
+      sha256: "2ba20a47c8f1f233bed775ba2dd0d3ac97b4cf32fc17731b3dfc672b06b0e92a"
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.6.5"
+  http:
+    dependency: transitive
+    description:
+      name: http
+      sha256: "5895291c13fa8a3bd82e76d5627f69e0d85ca6a30dcac95c4ea19a5d555879c2"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.13.6"
+>>>>>>> b945e4858da5067237549d83b7411d45aecbbf6b
   http_parser:
     dependency: transitive
     description:
@@ -359,7 +448,11 @@ packages:
       sha256: "8829d8a55c13fc0e37127c29fedf290c102f4e40ae94ada574091fe0ff96c917"
       url: "https://pub.dev"
     source: hosted
+<<<<<<< HEAD
     version: "1.8.3"
+=======
+    version: "1.8.2"
+>>>>>>> b945e4858da5067237549d83b7411d45aecbbf6b
   path_provider:
     dependency: "direct main"
     description:
@@ -448,6 +541,7 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.2.4"
+<<<<<<< HEAD
   provider:
     dependency: "direct main"
     description:
@@ -456,6 +550,16 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "6.0.5"
+=======
+  quiver:
+    dependency: transitive
+    description:
+      name: quiver
+      sha256: b1c1ac5ce6688d77f65f3375a9abb9319b3cb32486bdc7a1e0fdf004d7ba4e47
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.2.1"
+>>>>>>> b945e4858da5067237549d83b7411d45aecbbf6b
   sky_engine:
     dependency: transitive
     description: flutter
@@ -485,6 +589,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.1"
+  stream_transform:
+    dependency: transitive
+    description:
+      name: stream_transform
+      sha256: "14a00e794c7c11aa145a170587321aedce29769c08d7f58b1d141da75e3b1c6f"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.1.0"
   string_scanner:
     dependency: transitive
     description:
@@ -529,10 +641,17 @@ packages:
     dependency: transitive
     description:
       name: win32
+<<<<<<< HEAD
       sha256: "7dacfda1edcca378031db9905ad7d7bd56b29fd1a90b0908b71a52a12c41e36b"
       url: "https://pub.dev"
     source: hosted
     version: "5.0.3"
+=======
+      sha256: "5a751eddf9db89b3e5f9d50c20ab8612296e4e8db69009788d6c8b060a84191c"
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.1.4"
+>>>>>>> b945e4858da5067237549d83b7411d45aecbbf6b
   xdg_directories:
     dependency: transitive
     description:

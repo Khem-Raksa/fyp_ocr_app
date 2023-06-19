@@ -1,10 +1,16 @@
-import 'dart:async';
 import 'package:flutter/material.dart';
+<<<<<<< HEAD
 import 'package:fyp_ocr_app/provider/ocr_provider.dart';
 import 'package:provider/provider.dart';
 import 'screen/homepage.dart';
+=======
+import 'package:get/get.dart';
+>>>>>>> b945e4858da5067237549d83b7411d45aecbbf6b
 import 'package:lottie/lottie.dart';
 import 'package:provider/provider.dart';
+
+import 'homepage.dart';
+import 'dart:async';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -25,7 +31,7 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
@@ -62,7 +68,6 @@ class _SplashScreenState extends State<SplashScreen> {
                   title: 'FYP OCR Demo App',
                 ))));
   }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(

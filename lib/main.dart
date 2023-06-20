@@ -1,15 +1,11 @@
 import 'package:flutter/material.dart';
-<<<<<<< HEAD
 import 'package:fyp_ocr_app/provider/ocr_provider.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:provider/provider.dart';
 import 'screen/homepage.dart';
-=======
-import 'package:get/get.dart';
->>>>>>> b945e4858da5067237549d83b7411d45aecbbf6b
 import 'package:lottie/lottie.dart';
 import 'package:provider/provider.dart';
 
-import 'homepage.dart';
 import 'dart:async';
 
 void main() {
@@ -48,12 +44,14 @@ class MyApp extends StatelessWidget {
           900: Color(0xff27374D),
         }),
       ),
-      home: SplashScreen(),
+      home: const SplashScreen(),
     );
   }
 }
 
 class SplashScreen extends StatefulWidget {
+  const SplashScreen({super.key});
+
   @override
   _SplashScreenState createState() => _SplashScreenState();
 }
@@ -62,12 +60,13 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     Timer(
-        const Duration(seconds: 6),
+        const Duration(seconds: 2),
         () => Navigator.of(context).pushReplacement(MaterialPageRoute(
             builder: (BuildContext context) => const MyHomePage(
                   title: 'FYP OCR Demo App',
                 ))));
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:fyp_ocr_app/provider/ocr_provider.dart';
+import 'package:lottie/lottie.dart';
 import 'package:provider/provider.dart';
 
 class ResultScreen extends StatelessWidget {
@@ -26,28 +27,33 @@ class ResultScreen extends StatelessWidget {
           child: Column(
             children: [
               Consumer<OcrProvider>(
-                builder: (context, provider, child) => ListView.builder(
-                  shrinkWrap: true,
-                  itemCount: provider.result.text?.length,
-                  physics: const NeverScrollableScrollPhysics(),
-                  itemBuilder: (
-                    BuildContext context,
-                    index,
-                  ) {
-                    return Column(
-                      children: [
-                        Image.file(
-                          provider.crop[index],
-                          width: 120,
-                          height: 120,
+                builder: (context, provider, child) => provider.isLoading
+                    ? Center(
+                        child: Container(
+                            height: 300,
+                            width: 300,
+                            color: Colors.white,
+                            child: Lottie.asset("assets/loading.json")),
+                      )
+                    : SizedBox(
+                        height: 600,
+                        child: ListView.builder(
+                          itemCount: provider.result.text?.length,
+                          // physics: const NeverScrollableScrollPhysics(),
+                          itemBuilder: (
+                            BuildContext context,
+                            index,
+                          ) {
+                            return Column(
+                              children: [
+                                Text(
+                                  provider.result.text![index],
+                                ),
+                              ],
+                            );
+                          },
                         ),
-                        Text(
-                          provider.result.text![index],
-                        ),
-                      ],
-                    );
-                  },
-                ),
+                      ),
               ),
             ],
           ),

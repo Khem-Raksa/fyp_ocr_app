@@ -13,15 +13,19 @@ import '../model/result_model.dart';
 class OcrProvider with ChangeNotifier {
   Result result = Result();
   List<File> crop = [];
+  bool isLoading = false;
   Future<void> getOcrResult(XFile? imageFile) async {
     if (imageFile == null) {
       return;
     }
 
+    isLoading = true;
     var request = http.MultipartRequest(
       'POST',
-      Uri.parse('http://localhost:8000/recognize'),
+      Uri.parse('https://ocr.ngrok.app/recognize'),
     );
+
+    print("here");
 
     // Create a file object from the picked image file path
     var image = await http.MultipartFile.fromPath('file', imageFile.path);
@@ -34,21 +38,27 @@ class OcrProvider with ChangeNotifier {
 
     // Check the response status
     File img = File(imageFile.path);
-
+    print(response.statusCode);
     if (response.statusCode == 200) {
       // File uploaded successfully
       var data = await http.Response.fromStream(response);
       dynamic body = jsonDecode(const Utf8Decoder().convert(data.bodyBytes));
+      print("here");
+
       result = Result.fromJson(body);
-      for (var i = 0; i < result.bbox!.length; i++) {
-        crop.add(await ImageHelper.cropImage(
-          img,
-          result.bbox?[i].x,
-          result.bbox?[i].y,
-          result.bbox?[i].w,
-          result.bbox?[i].h,
-        ));
-      }
+      isLoading = false;
+      print(result);
+      notifyListeners();
+
+      // for (var i = 0; i < result.bbox!.length; i++) {
+      //   crop.add(await ImageHelper.cropImage(
+      //     img,
+      //     result.bbox?[i].x,
+      //     result.bbox?[i].y,
+      //     result.bbox?[i].w,
+      //     result.bbox?[i].h,
+      //   ));
+      // }
     } else {
       // Error occurred while uploading the file
       print('Image upload failed!');

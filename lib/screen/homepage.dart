@@ -24,13 +24,18 @@ class _MyHomePageState extends State<MyHomePage> {
   chooseImage() async {
     final ImagePicker picker = ImagePicker();
     selectedFile = await picker.pickImage(source: ImageSource.gallery);
+    if (selectedFile == null) {
+      return;
+    }
+    if (context.mounted) {
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => const ResultScreen(),
+        ),
+      );
+    }
     await ocrProvider.getOcrResult(selectedFile);
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (context) => const ResultScreen(),
-      ),
-    );
   }
 
   Widget build(BuildContext context) {

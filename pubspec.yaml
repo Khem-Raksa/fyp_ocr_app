@@ -1,12 +1,12 @@
 name: fyp_ocr_app
 description: A new Flutter project.
 
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
 
 version: 1.0.0+1
 
 environment:
-  sdk: '>=2.19.4 <3.0.0'
+  sdk: ">=2.19.4 <3.0.0"
 
 dependencies:
   flutter:
@@ -15,18 +15,13 @@ dependencies:
   cupertino_icons: ^1.0.2
   lottie: ^2.3.2
   flutter_launcher_icons: ^0.13.1
-<<<<<<< HEAD
   provider: ^6.0.5
-  image_picker: ^0.8.8
   http: ^1.0.0
-  path_provider: ^2.0.15
-=======
   camera: ^0.10.5+2
   get: ^4.6.5
   path_provider: ^2.0.15
   file_selector: ^0.9.3
   image_picker: ^0.8.8
->>>>>>> b945e4858da5067237549d83b7411d45aecbbf6b
 
 dev_dependencies:
   flutter_test:
@@ -37,7 +32,7 @@ dev_dependencies:
 flutter_launcher_icons:
   android: "launcher_icon"
   ios: false
-  image_path: "assets/ocr8.png" 
+  image_path: "assets/ocr8.png"
   adaptive_icon_background: "assets/ocr8.png"
   adaptive_icon_foreground: "assets/ocr8.png"
 
@@ -45,5 +40,3 @@ flutter:
   uses-material-design: true
   assets:
     - assets/
-
-  

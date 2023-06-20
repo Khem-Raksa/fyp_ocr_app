@@ -169,8 +169,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "6.1.4"
-<<<<<<< HEAD
-=======
   file_selector:
     dependency: "direct main"
     description:
@@ -187,7 +185,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.5.1+4"
->>>>>>> b945e4858da5067237549d83b7411d45aecbbf6b
   file_selector_linux:
     dependency: transitive
     description:
@@ -212,8 +209,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.5.1"
-<<<<<<< HEAD
-=======
   file_selector_web:
     dependency: transitive
     description:
@@ -222,7 +217,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.9.0+4"
->>>>>>> b945e4858da5067237549d83b7411d45aecbbf6b
   file_selector_windows:
     dependency: transitive
     description:
@@ -270,16 +264,6 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
-<<<<<<< HEAD
-  http:
-    dependency: "direct main"
-    description:
-      name: http
-      sha256: "4c3f04bfb64d3efd508d06b41b825542f08122d30bda4933fb95c069d22a4fa3"
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.0.0"
-=======
   get:
     dependency: "direct main"
     description:
@@ -289,14 +273,13 @@ packages:
     source: hosted
     version: "4.6.5"
   http:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: http
-      sha256: "5895291c13fa8a3bd82e76d5627f69e0d85ca6a30dcac95c4ea19a5d555879c2"
+      sha256: "4c3f04bfb64d3efd508d06b41b825542f08122d30bda4933fb95c069d22a4fa3"
       url: "https://pub.dev"
     source: hosted
-    version: "0.13.6"
->>>>>>> b945e4858da5067237549d83b7411d45aecbbf6b
+    version: "1.0.0"
   http_parser:
     dependency: transitive
     description:
@@ -448,11 +431,7 @@ packages:
       sha256: "8829d8a55c13fc0e37127c29fedf290c102f4e40ae94ada574091fe0ff96c917"
       url: "https://pub.dev"
     source: hosted
-<<<<<<< HEAD
     version: "1.8.3"
-=======
-    version: "1.8.2"
->>>>>>> b945e4858da5067237549d83b7411d45aecbbf6b
   path_provider:
     dependency: "direct main"
     description:
@@ -541,7 +520,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.2.4"
-<<<<<<< HEAD
   provider:
     dependency: "direct main"
     description:
@@ -550,7 +528,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "6.0.5"
-=======
   quiver:
     dependency: transitive
     description:
@@ -559,7 +536,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.2.1"
->>>>>>> b945e4858da5067237549d83b7411d45aecbbf6b
   sky_engine:
     dependency: transitive
     description: flutter
@@ -641,17 +617,10 @@ packages:
     dependency: transitive
     description:
       name: win32
-<<<<<<< HEAD
       sha256: "7dacfda1edcca378031db9905ad7d7bd56b29fd1a90b0908b71a52a12c41e36b"
       url: "https://pub.dev"
     source: hosted
     version: "5.0.3"
-=======
-      sha256: "5a751eddf9db89b3e5f9d50c20ab8612296e4e8db69009788d6c8b060a84191c"
-      url: "https://pub.dev"
-    source: hosted
-    version: "4.1.4"
->>>>>>> b945e4858da5067237549d83b7411d45aecbbf6b
   xdg_directories:
     dependency: transitive
     description:
